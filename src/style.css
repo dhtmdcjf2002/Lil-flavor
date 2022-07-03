@@ -1,0 +1,625 @@
+/* 공용 */
+@font-face {
+    src: url("fonts/SangSangTitleB.ttf");
+    font-family: "Sang"
+}
+
+@font-face {
+    src: url("fonts/BhuTukaExpandedOne-Regular.ttf");
+    font-family: "Bhu"
+}
+
+@font-face {
+    src: url("fonts/KyoboHandwriting2020pdy.ttf");
+    font-family: "Kyobo"
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.wrap .header-wrap {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    border-bottom: 0.5px solid gray;
+    z-index: 99999;
+    width: 100%;
+    top: 0;
+}
+
+.wrap .header-wrap .header-inner {
+    padding: 12px 24px 0px 24px
+}
+
+.wrap .header-wrap .header-inner .header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrap .header-wrap .header-inner .header .logo {
+    font-family: Sang;
+    width: 200px;
+}
+
+.wrap .header-wrap .header-inner .header .logo div {
+    margin: 0 auto;
+}
+
+.wrap .header-wrap .header-inner .header .logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.wrap .header-wrap .header-inner .header .logo span:nth-child(1) {
+    font-size: 4rem;
+    color: #00A0D2;
+}
+
+.wrap .header-wrap .header-inner .header .logo span:nth-child(2) {
+    font-size: 2rem;
+    color: black;
+}
+
+.wrap .header-wrap .header-inner .header .menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.wrap .header-wrap .header-inner .header .menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.wrap .header-wrap .header-inner .header .menu li {
+    padding: 0px 30px;
+    font-family: Bhu;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.wrap .header-wrap .header-inner .header .menu li:hover {
+    background-color: lightgray;
+    opacity: 0.5;
+    border-radius: 4px;
+}
+
+.wrap .header-wrap .header-inner .header .menu .dropdown {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.wrap .header-wrap .header-inner .header .menu .dropdown a:hover {
+    background-color: lightgray;
+}
+
+.wrap .header-wrap .header-inner .header .menu .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 160px;
+    z-index: 2;
+    list-style: none;
+}
+
+.dropdown-content li {
+    padding: unset;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.footer-wrap {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+
+}
+
+.footer-wrap .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    background-color: #383941;
+
+}
+
+.footer-wrap .footer-inner .footer-text {
+    font-family: none;
+    font-size: 13px;
+    text-align: center;
+    line-height: 2;
+    padding: 12px 24px;
+    color: white;
+}
+
+.footer-wrap .footer-inner .footer-img {
+    display: flex;
+    width: 200px;
+}
+
+.footer-wrap .footer-inner .footer-img a {
+    margin: auto;
+}
+
+.footer-wrap .footer-inner .footer-img img {
+    width: 36px;
+}
+
+.subtop-wrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #e1e1e1;
+}
+
+.subtop-inner {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 800px;
+    padding: 25px 0px 25px 0px;
+}
+
+.inner-text {
+    margin: auto;
+    line-height: 1.5;
+    width: 500px;
+}
+
+.inner-img img {
+    width: 250px;
+}
+
+.place-wrap {
+    width: 100%;
+}
+
+.place-wrap .place-inner {
+    padding: 6rem;
+}
+
+.place-wrap .place-inner .place-section {
+    margin: 4rem;
+}
+
+.place-wrap .place-inner .place-section p {
+    text-align: end;
+}
+
+.pink {
+    background-color: #ff8b8b;
+}
+
+.beige {
+    background-color: #f9f7e8;
+}
+
+.sky {
+    background-color: #61bfad;
+}
+
+.place-wrap .place-inner .place-section .place-item {
+    width: 1200px;
+    height: 400px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cafe,
+.location .place-item-text {
+    color: #f9f7e8;
+}
+
+.shop .place-item-text {
+    width: 500px;
+    color: #61bfad;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.place-wrap .place-inner .place-section .place-item .place-item-img {
+    width: 532px;
+}
+
+.place-wrap .place-inner .place-section .place-item .place-item-img img {
+    margin: auto;
+    display: block;
+    width: 256px;
+    height: 256px;
+}
+
+.place-item-text {
+    line-height: 1.5;
+    font-size: 24px;
+    width: 600px;
+}
+
+
+/* 검증 끝 */
+.profile {
+    padding: 2rem;
+    width: 680px;
+    height: 150px;
+    margin: auto;
+    background-color: lightgreen;
+    border-radius: 15px;
+    border: 1px solid lightgreen;
+    position: relative;
+}
+
+.card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+.front {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+}
+
+.front div {
+    width: 372px;
+
+}
+
+.front div img {
+    margin: auto;
+}
+
+.back {
+    z-index: 1;
+    transform: rotateY(-180deg);
+}
+
+.namecard {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.profile:hover .front {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.profile:hover .back {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/************** ****************/
+
+
+/* 여기까지 검증 끝 */
+.swiper {
+    width: 900px;
+    height: 500px;
+}
+
+.swiper-slide img {
+    width: 800px;
+    height: 500px;
+    margin-left: 50px;
+}
+
+/* index.html, Miix.html, Siid.html */
+
+.main-wrap {
+    background: linear-gradient(to bottom, lightgray, white, lightgray);
+}
+
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    padding: 6rem 3rem;
+}
+
+.main h1 {
+    text-align: center;
+}
+
+.banner {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.inner-list {
+    display: flex;
+    transition: .5s ease-out;
+}
+
+.question {
+    font-size: 1.5rem;
+    font-family: Sang;
+    height: 10%;
+}
+
+.answer {
+    display: none;
+    font-size: 1rem;
+    text-align: left;
+    height: 90%;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.item {
+    padding: 24px;
+}
+
+
+.subject {
+    text-align: center;
+    width: 33.3%;
+    height: 500px;
+    position: relative;
+}
+
+
+.subject-img {
+    display: table;
+    width: 100%;
+    height: 50%;
+}
+
+.img-space {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+
+.subject-img img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.subject-text {
+    width: 100%;
+    height: 50%;
+}
+
+/* help.html, sub.html, place.html */
+
+#sub .sub_inner {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 4rem 0;
+}
+
+#sub .sub_visual {
+    background: url("../images/sub_visual.jpg") no-repeat center center;
+    height: 150px;
+}
+
+.snb {
+    width: 200px;
+    float: left;
+}
+
+.snb h3 {
+    height: 150px;
+    background: #9b0f1a;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    line-height: 150px;
+    margin-bottom: 12px;
+}
+
+.snb ul li {
+    border-bottom: 3px solid #f1ae4f;
+    margin: 8px 0;
+}
+
+.snb ul li a {
+    display: block;
+    padding: 4px 28px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.snb ul li a:hover {
+    background: #f1ae4f;
+    color: #fff;
+}
+
+.sub_cont {
+    float: right;
+    width: 960px;
+    min-height: 700px;
+}
+
+.sub_cont .sub_title {
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 8px 20px;
+    border-bottom: 1px solid #f1ae4f;
+}
+
+.sub_cont .sub_title h4 {
+    float: left;
+    font-size: 18px;
+}
+
+.sub_cont .sub_title p {
+    float: right;
+    color: #969696;
+    font-size: 14px;
+}
+
+.sub_cont .sub_title p b {
+    color: #9b0f1a;
+}
+
+.sub_cont .contant {
+    padding: 0 20px;
+}
+
+.sub_cont .contant h5 {
+    font-size: 20px;
+    margin: 40px 0;
+    color: #484848;
+}
+
+.sub_cont .contant h5 img {
+    padding-right: 8px;
+}
+
+.sub_cont .contant p {
+    margin-bottom: 28px;
+    color: #313131;
+    font-size: 16px;
+}
+
+.sub_cont .contant p span {
+    display: block;
+}
+
+.sub_cont .contant .ceo {
+    text-align: right;
+    font-size: 20px;
+    margin: 40px 0;
+    letter-spacing: -1px;
+}
+
+.subbox {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.subbox img {
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: cover;
+    transform: scale(1.0);
+    transition: transform .5s;
+}
+
+.subbox img:hover {
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
+.sublist-wrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sublist {
+    text-align: center;
+    display: table;
+    border: 1px solid #cecece;
+    width: 280px;
+    height: 250px;
+}
+
+.sublist-wrap a {
+    text-decoration: none;
+}
+
+.sublist-item1 {
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(244, 177, 17, 1);
+    width: 280px;
+    height: 350px;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    object-fit: cover;
+    transform: scale(1.0);
+    transition: transform .5s;
+}
+
+.sublist-item1:hover {
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
+.sublist-item1 img {
+    width: 155px;
+    transform: translate(-10%, 140%);
+}
+
+
+
+.sublist-item2 {
+    background-color: rgba(186, 186, 186, 1);
+    width: 280px;
+    height: 350px;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    object-fit: cover;
+    transform: scale(1.0);
+    transition: transform .5s;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+}
+
+.sublist-item2 img {
+    width: 155px;
+    transform: translate(30%, 140%);
+}
+
+.sublist-item2:hover {
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
+.sublist-item2 p {
+    margin: 0 auto;
+    color: white;
+    font-size: 2px;
+}
+
+.main-content table {
+    width: 100%;
+}
+
+/* Help.html */
